@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "webmock", "< 1.14.0"
   s.add_development_dependency "vendorer"
 
-  s.files = %w(README.md LICENSE) + Dir["lib/**/*", "vendor/**/*"]
+  s.files = %w(README.md LICENSE) + Dir["app/**/*", "lib/**/*", "vendor/**/*"]
 
   s.require_paths = ["lib"]
 end
