@@ -59,7 +59,7 @@ Also, ember-rails include some flags for the bootstrap generator:
 ```
 --ember-path or -d   # custom ember path
 --skip-git or -g     # skip git keeps
---javascript-engine  # engine for javascript (js, coffee or em)
+--javascript-engine  # engine for javascript (js, coffee, em or es6)
 --app-name or -n     # custom ember app name
 ```
 
@@ -101,7 +101,7 @@ Ember-rails include some flags options for bootstrap generator:
 ```
 --ember-path or -d # custom ember path
 --skip-git or -g # skip git keeps
---javascript-engine  # engine for javascript (js, coffee or em)
+--javascript-engine  # engine for javascript (js, coffee, em or es6)
 --app-name or -n # custom ember app name
 ```
 
