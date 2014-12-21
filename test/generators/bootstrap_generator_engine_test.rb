@@ -45,7 +45,7 @@ class BootstrapGeneratorEngineTest < Rails::Generators::TestCase
       run_generator ["--javascript-engine=#{engine}"]
       assert_file "#{ember_path}/store.js.#{engine}".sub('.js.js','.js')
       assert_file "#{ember_path}/router.js.#{engine}".sub('.js.js','.js')
-      assert_file "#{ember_path}/adapters/application_adapter.js.#{engine}".sub('.js.js','.js')
+      assert_file "#{ember_path}/adapters/application.js.#{engine}".sub('.js.js','.js')
       assert_file "#{ember_path}/#{engine_name}.js.#{engine}".sub('.js.js','.js')
     end
 
@@ -54,14 +54,14 @@ class BootstrapGeneratorEngineTest < Rails::Generators::TestCase
       run_generator ["--javascript-engine=#{engine}", "-d", custom_path]
       assert_file "#{custom_path}/store.js.#{engine}".sub('.js.js','.js')
       assert_file "#{custom_path}/router.js.#{engine}".sub('.js.js','.js')
-      assert_file "#{custom_path}/adapters/application_adapter.js.#{engine}".sub('.js.js','.js')
+      assert_file "#{custom_path}/adapters/application.js.#{engine}".sub('.js.js','.js')
       assert_file "#{custom_path}/#{engine_name}.js.#{engine}".sub('.js.js','.js')
     end
 
     test "create bootstrap in a rails engine with #{engine} and custom app name" do
       run_generator ["--javascript-engine=#{engine}", "-n", "MyEngine"]
       assert_file "#{ember_path}/router.js.#{engine}".sub('.js.js','.js'), /MyEngine\.Router\.map/
-      assert_file "#{ember_path}/adapters/application_adapter.js.#{engine}".sub('.js.js','.js'), /MyEngine\.ApplicationAdapter/
+      assert_file "#{ember_path}/adapters/application.js.#{engine}".sub('.js.js','.js'), /MyEngine\.ApplicationAdapter/
       assert_file "#{ember_path}/my_engine.js.#{engine}".sub('.js.js','.js')
     end
   end
