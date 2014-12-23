@@ -1,14 +1,5 @@
 require 'test_helper'
 
-if Rails.version >= "4.0.0"
-  ControllerTest  = ActionDispatch::Integration
-  IntegrationTest = ActionDispatch::IntegrationTest
-else
-  require 'json'
-  ControllerTest  = ActionController::TestCase
-  IntegrationTest = ActionController::IntegrationTest
-end
-
 class HomeControllerTest < ActionController::TestCase
 
   test "page header should include link to asset" do
